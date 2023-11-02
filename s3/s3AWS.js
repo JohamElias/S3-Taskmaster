@@ -1,6 +1,7 @@
 import { S3Client, PutObjectCommand, GetObjectCommand } from "@aws-sdk/client-s3"; // ES Modules import
 import {getSignedUrl} from "@aws-sdk/s3-request-presigner"
-const fs = require('fs');
+import 'fs'
+//const fs = require('fs');
 
 const s3Client = new S3Client({ region: "us-east-1" });
 
@@ -32,9 +33,3 @@ export const uploadFile=async (file)=>{
   const command = new PutObjectCommand(uploadParams)
   return await s3Client.send(command)
 }
-
-async function testS3(){
-    console.log("test.txt:  ",await getObject("test.txt"));
-}
-  
-  testS3()

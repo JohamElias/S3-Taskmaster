@@ -1,5 +1,5 @@
 import express from "express";
-import { uploadFile } from "../s3/s3AWS";
+import { uploadFile } from "../s3/s3AWS.js";
 
 const router = express.Router();
 
