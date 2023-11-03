@@ -18,7 +18,8 @@ router.get('/archivo/:key',async (req,res)=>{
     
     const result = await getObject(req.params.key)
     console.log(result);
-    res.send('Welcome to server');
+    res.redirect(result);
+    //res.send('Welcome to server');
 });
 
 export default router;
