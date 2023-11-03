@@ -1,6 +1,6 @@
 import { S3Client, PutObjectCommand, GetObjectCommand } from "@aws-sdk/client-s3"; // ES Modules import
 import {getSignedUrl} from "@aws-sdk/s3-request-presigner"
-import 'fs'
+import fs from 'fs'
 //const fs = require('fs');
 
 const s3Client = new S3Client({ region: "us-east-1" });
