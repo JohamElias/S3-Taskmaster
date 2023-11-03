@@ -14,9 +14,9 @@ router.post('/upload',async (req,res)=>{
     res.send('Archivo cargado');
 });
 
-router.get('/archivo',async (req,res)=>{
+router.get('/archivo/:key',async (req,res)=>{
     
-    const result = await readFile(req)
+    const result = await getObject(req.params.key)
     console.log(result);
     res.send('Welcome to server');
 });
